@@ -4,11 +4,23 @@ import {useState} from "react";
 const Counter = () => {
   const [isCounter, setCounter] = useState(0)
   return (
-    <button
-      onClick={() => setCounter(e => e + 1)}
-      className={styles.button}>
+    <div className={styles.div}>
+      <button
+        className={styles.button}
+        onClick={() => setCounter(e => e + 1)}
+      >
+        +
+      </button>
+      <span>
       {isCounter}
-    </button>
+     </span>
+      <button
+        className={styles.button}
+        onClick={() => setCounter(e => e - 1)}
+      >
+        -
+      </button>
+    </div>
   );
 };
 
